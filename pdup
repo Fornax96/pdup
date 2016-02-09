@@ -1,0 +1,15 @@
+#!/bin/bash
+MINPARAMS=1
+MAXPARAMS=1
+
+FILE="$1"
+FILENAME="${FILE##*/}"
+
+echo "Uploading ... "
+RESPONSE=$(curl -# -F "fileName=$FILENAME" -F "file=@$FILE" http://pixeldra.in/api/upload)
+
+echo ""
+echo -n "Your file URL: "
+echo $RESPONSE | grep -Po '(?<="url":")[^"]*'
+
+echo "" # Move cursor down when script finishes
