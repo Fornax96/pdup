@@ -2,7 +2,7 @@ Hello, I made a little Bash script that you can use to upload files to http://pi
 
 To install it you can execute this command:
 
-    sudo wget http://pixeldra.in/api/download/2ztMsB -O "/usr/local/bin/pdup"; sudo chmod +x "/usr/local/bin/pdup"
+    sudo wget https://raw.githubusercontent.com/Fornax96/pdup/master/pdup -O "/usr/local/bin/pdup"; sudo chmod +x "/usr/local/bin/pdup"
 
 Explanation: The wget command downloads the script from Pixeldrain and saves it to /usr/local/bin/pdup so you can run it from the terminal. Then chmod makes it executable
 
