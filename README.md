@@ -4,7 +4,7 @@ To install it you can execute this command:
 
     sudo wget https://raw.githubusercontent.com/Fornax96/pdup/master/pdup -O "/usr/local/bin/pdup"; sudo chmod +x "/usr/local/bin/pdup"
 
-Explanation: The wget command downloads the script from Pixeldrain and saves it to /usr/local/bin/pdup so you can run it from the terminal. Then chmod makes it executable
+Explanation: The wget command downloads the script from github and saves it to /usr/local/bin/pdup so you can run it from the terminal. Then chmod makes it executable
 
 Then you can upload files from anywhere in the system using
 
