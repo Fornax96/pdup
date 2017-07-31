@@ -6,7 +6,7 @@ FILE="$1"
 FILENAME="${FILE##*/}"
 
 echo "Uploading ... "
-RESPONSE=$(curl -# -F "fileName=$FILENAME" -F "file=@$FILE" http://pixeldra.in/api/upload)
+RESPONSE=$(curl -# -F "fileName=$FILENAME" -F "file=@$FILE" https://pixeldra.in/api/upload)
 
 echo ""
 echo -n "Your file URL: "
