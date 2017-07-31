@@ -1,4 +1,4 @@
-Hello, I made a little Bash script that you can use to upload files to http://pixeldrain.com/ from the terminal. This is very useful for showing log files to developers or making quick backups of remote files through SSH.
+Hello, I made a little Bash script that you can use to upload files to https://pixeldrain.com/ from the terminal. This is very useful for showing log files to developers or making quick backups of remote files through SSH.
 
 To install it you can execute this command:
 
