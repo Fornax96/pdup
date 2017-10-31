@@ -1,6 +1,5 @@
 #!/bin/bash
 MINPARAMS=1
-MAXPARAMS=100
 PDSERVER="https://pixeldrain.com"
 
 for FILE in "$@"
