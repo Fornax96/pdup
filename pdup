@@ -1,15 +1,18 @@
 #!/bin/bash
 MINPARAMS=1
-MAXPARAMS=1
+MAXPARAMS=100
+PDSERVER="https://pixeldrain.com"
 
-FILE="$1"
-FILENAME="${FILE##*/}"
+for FILE in "$@"
+do
+	FILENAME="${FILE##*/}"
 
-echo "Uploading ... "
-RESPONSE=$(curl -# -F "fileName=$FILENAME" -F "file=@$FILE" https://pixeldra.in/api/upload)
+	echo "Uploading $FILENAME ... "
+	RESPONSE=$(curl -# -F "fileName=$FILENAME" -F "file=@$FILE" $PDSERVER/api/upload)
+	FILEID=$(echo $RESPONSE | grep -Po '(?<="id":")[^"]*')
 
-echo ""
-echo -n "Your file URL: "
-echo $RESPONSE | grep -Po '(?<="url":")[^"]*'
+	echo "Your file URL: $PDSERVER/u/$FILEID"
+	echo ""
+done
 
 echo "" # Move cursor down when script finishes
