@@ -7,7 +7,7 @@ do
 	FILENAME="${FILE##*/}"
 
 	echo "Uploading $FILENAME ... "
-	RESPONSE=$(curl -# -F "fileName=$FILENAME" -F "file=@$FILE" $PDSERVER/api/upload)
+	RESPONSE=$(curl -# -F "name=$FILENAME" -F "file=@$FILE" $PDSERVER/api/file)
 	FILEID=$(echo $RESPONSE | grep -Po '(?<="id":")[^"]*')
 
 	echo "Your file URL: $PDSERVER/u/$FILEID"
