@@ -11,6 +11,7 @@ do
 	FILEID=$(echo $RESPONSE | grep -Po '(?<="id":")[^"]*')
 
 	echo "Your file URL: $PDSERVER/u/$FILEID"
+        echo "$(date) - $FILENAME: $PDSERVER/u/$FILEID" >>~/pixeldrainuploads.txt
 	echo ""
 done
 
